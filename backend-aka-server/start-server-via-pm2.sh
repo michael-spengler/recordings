@@ -1,0 +1,1 @@
+pm2 start ./backend-aka-server/server.ts --interpreter="deno" --interpreter-args="run --allow-net --allow-read"
