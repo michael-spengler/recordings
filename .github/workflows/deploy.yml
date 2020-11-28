@@ -1,0 +1,15 @@
+name: Deploy our latest fancy shit
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: deploying our latest fancy shit
+      run: |
+        echo "developers developers developers developers",
+        sshpass -p ${{ secrets.pw }} ssh root@95.216.151.143 -o StrictHostKeyChecking=no < ./deploy.bash
